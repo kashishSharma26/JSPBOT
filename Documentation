@@ -4,13 +4,13 @@
 JSPBOT is a Flask-based chatbot solution designed to facilitate information retrieval processes within an organization. It leverages MySQL databases and the Flask framework to provide seamless integration and efficient query handling.
 
 ## Components
-1. **Database Connection**: The `local()` function establishes a connection to the MySQL database.
+1. Database Connection: The `local()` function establishes a connection to the MySQL database.
    
-2. **Flask Application**: The Flask app initializes the API and handles incoming requests.
+2. Flask Application: The Flask app initializes the API and handles incoming requests.
 
-3. **API Endpoint**: The API endpoint `/api/sendRequest` processes POST requests and interacts with the database based on user queries.
+3. API Endpoint: The API endpoint `/api/sendRequest` processes POST requests and interacts with the database based on user queries.
 
-4. **Resource Class**: The `API` class defines the behavior for handling API requests.
+4. Resource Class: The `API` class defines the behavior for handling API requests.
 
 ## Setup
 1. Prerequisites:
