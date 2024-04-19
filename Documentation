@@ -1,0 +1,53 @@
+### JSPBOT Documentation
+
+## Introduction
+JSPBOT is a Flask-based chatbot solution designed to facilitate information retrieval processes within an organization. It leverages MySQL databases and the Flask framework to provide seamless integration and efficient query handling.
+
+## Components
+1. **Database Connection**: The `local()` function establishes a connection to the MySQL database.
+   
+2. **Flask Application**: The Flask app initializes the API and handles incoming requests.
+
+3. **API Endpoint**: The API endpoint `/api/sendRequest` processes POST requests and interacts with the database based on user queries.
+
+4. **Resource Class**: The `API` class defines the behavior for handling API requests.
+
+## Setup
+1. Prerequisites:
+   - Python installed on the system.
+   - MySQL database with appropriate tables (`application_list` and `function_list`).
+
+2. Installation:
+   - Clone the repository to your local machine.
+   - Install the required Python packages using `pip install -r requirements.txt`.
+
+3. Configuration:
+   - Update the database connection details in the `local()` and `fun()` functions.
+   - Ensure that the necessary tables (`application_list` and `function_list`) exist in the MySQL database.
+
+4. Usage:
+   - Run the Flask application using `python filename.py`.
+   - Send POST requests to the API endpoint `/api/sendRequest` with JSON payloads containing `query`, `email`, and `room_id` parameters.
+
+## Functionality
+- The API processes incoming requests and executes corresponding SQL queries based on user inputs.
+- It retrieves application and function details from the MySQL database and returns the results as JSON responses.
+- The chatbot integrates with Google Chat to send response messages to specified rooms.
+
+## Example Usage
+```python
+import requests
+
+url = 'http://localhost:5000/api/sendRequest'
+payload = {
+    'query': 'applications',
+    'email': 'user@example.com',
+    'room_id': 'chat_room_123'
+}
+response = requests.post(url, json=payload)
+print(response.json())
+```
+## Conclusion
+JSPBOT streamlines information retrieval processes within an organization, offering a robust and efficient solution for handling user queries.
+
+For any inquiries or support, please contact [Kashish Sharma](mailto:kashish2002bhardwaj@email.com).
